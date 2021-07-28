@@ -33,6 +33,8 @@ const RenderWorkout = ({ selected, squatTopSet, squatBackOffSet }) => {
           {exercise.exercise} {squatTopSet} {exercise.sets} {squatBackOffSet}
         </div>
       );
+    } else {
+      return "";
     }
   });
 

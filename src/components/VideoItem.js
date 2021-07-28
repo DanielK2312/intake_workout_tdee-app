@@ -4,7 +4,11 @@ import React from "react";
 const VideoItem = ({ video }) => {
   return (
     <div className="video-item item">
-      <img className="ui image" src={video.snippet.thumbnails.medium.url} />
+      <img
+        alt="video"
+        className="ui image"
+        src={video.snippet.thumbnails.medium.url}
+      />
       <div className="content">
         <a
           target="_blank"

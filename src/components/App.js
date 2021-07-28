@@ -24,7 +24,7 @@ const dropdownOptions = [
   },
 ];
 
-export default () => {
+const App = () => {
   const [selected, setSelected] = useState("");
   // keep track of the list of videos received from API request
   const [videos, setVideos] = useState([]);
@@ -79,3 +79,5 @@ export default () => {
     </div>
   );
 };
+
+export default App;

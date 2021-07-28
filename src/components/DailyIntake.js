@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Dropdown } from "semantic-ui-react";
 import DailyIntakeBWConverter from "./DailyIntakeBWConverter";
 import DailyIntakeHeightConverter from "./DailyIntakeHeightConverter";

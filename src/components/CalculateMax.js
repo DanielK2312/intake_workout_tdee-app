@@ -97,7 +97,6 @@ class CalculateMax extends React.Component {
               placeholder=""
               onChange={(e) => this.setState({ squatMax: e.target.value })}
               value={this.state.squatMax}
-              placeholder="Enter Squat Max"
             ></input>
             {this.state.showSquat && (
               <div className="ui positive message">
@@ -129,7 +128,6 @@ class CalculateMax extends React.Component {
               placeholder=""
               onChange={(e) => this.setState({ benchMax: e.target.value })}
               value={this.state.benchMax}
-              placeholder="Enter Bench Max"
             ></input>
             {this.state.showBench && (
               <div className="ui positive message">
@@ -161,7 +159,6 @@ class CalculateMax extends React.Component {
               placeholder=""
               onChange={(e) => this.setState({ deadMax: e.target.value })}
               value={this.state.deadMax}
-              placeholder="Enter Deadlift Max"
             ></input>
             {this.state.showDead && (
               <div className="ui positive message">
