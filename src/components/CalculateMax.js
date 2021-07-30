@@ -96,7 +96,7 @@ class CalculateMax extends React.Component {
     let top = this.calculateInitialTopSet(parseInt(this.state.benchMax));
     let backOff = this.calculateBackOff(top);
 
-    if (this.state.squatMax === "" || isNaN(this.state.squatMax)) {
+    if (this.state.benchMax === "" || isNaN(this.state.benchMax)) {
       this.setState({ showBenchErrorMessage: true });
     } else {
       this.setState({
@@ -117,7 +117,7 @@ class CalculateMax extends React.Component {
     let top = this.calculateInitialTopSet(parseInt(this.state.deadMax));
     let backOff = this.calculateBackOff(top);
 
-    if (this.state.squatMax === "" || isNaN(this.state.squatMax)) {
+    if (this.state.deadMax === "" || isNaN(this.state.deadMax)) {
       this.setState({ showDeadErrorMessage: true });
     } else {
       this.setState({
