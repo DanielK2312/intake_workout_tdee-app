@@ -5,7 +5,7 @@ import "./styles.css";
 
 const Header = () => {
   return (
-    <div className="ui fixed borderless huge menu">
+    <div className="ui menu">
       <a href="/" className="item">
         Home
       </a>
