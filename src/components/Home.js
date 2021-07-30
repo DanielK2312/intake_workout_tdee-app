@@ -17,7 +17,14 @@ const Home = () => {
         </a>
       </div>
 
-      <div style={{ marginTop: "50px", fontSize: "18px" }}>
+      <div
+        style={{
+          marginTop: "50px",
+          fontSize: "18px",
+          border: "3px solid",
+          textAlign: "center",
+        }}
+      >
         <p>Welcome to my custom React application!</p>
         <div>
           <p>With this application, you are able to do one of three things:</p>
@@ -27,7 +34,7 @@ const Home = () => {
               (Chest, Back, Legs) using the "Get Workout" Button
             </li>
             <li>
-              Loop up any exercises you are not familiar with using the "Lookup"
+              Look up any exercises you are not familiar with using the "Lookup"
               Button
             </li>
             <li>
