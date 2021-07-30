@@ -1,8 +1,3 @@
-.ui.fixed.borderless.menu {
-  background-color: lightblue;
-  font-size: medium;
-}
-
 .error-box {
   color: darkmagenta;
   background: lightpink;
@@ -17,4 +12,8 @@
 
 .video-item.item img {
   max-width: 180px;
+}
+
+.navBar {
+  color:red;
 }
