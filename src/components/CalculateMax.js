@@ -15,6 +15,37 @@ class CalculateMax extends React.Component {
     deadTopSetWeight: 0,
     deadBackOffSetWeight: 0,
     showDead: false,
+    showSquatErrorMessage: false,
+    showBenchErrorMessage: false,
+    showDeadErrorMessage: false,
+  };
+
+  // make error message disappear after 3 seconds
+  componentDidUpdate() {
+    // only shows error message for form that has invalid input
+    // shows error message for 3 seconds then sets it to false so it disappears
+    if (this.state.showSquatErrorMessage === true) {
+      setTimeout(() => this.setState({ showSquatErrorMessage: false }), 3000);
+    } else if (this.state.showBenchErrorMessage === true) {
+      setTimeout(() => this.setState({ showBenchErrorMessage: false }), 3000);
+    } else if (this.state.showDeadErrorMessage === true) {
+      setTimeout(() => this.setState({ showDeadErrorMessage: false }), 3000);
+    }
+  }
+
+  invalidBox = () => {
+    return (
+      <div className="ui negative message">
+        <div className="header">
+          There were some errors with your submission
+        </div>
+        <ul className="list">
+          <li>
+            You must enter a whole or decimal number with no letters or symbols
+          </li>
+        </ul>
+      </div>
+    );
   };
 
   /**
@@ -44,12 +75,16 @@ class CalculateMax extends React.Component {
     let top = this.calculateInitialTopSet(parseInt(this.state.squatMax));
     let backOff = this.calculateBackOff(top);
 
-    this.setState({
-      squatTopSetWeight: top,
-      squatBackOffSetWeight: backOff,
-      showSquat: true,
-      squatMax: "",
-    });
+    if (this.state.squatMax === "" || isNaN(this.state.squatMax)) {
+      this.setState({ showSquatErrorMessage: true });
+    } else {
+      this.setState({
+        squatTopSetWeight: top,
+        squatBackOffSetWeight: backOff,
+        showSquat: true,
+        squatMax: "",
+      });
+    }
   };
 
   /**
@@ -61,12 +96,16 @@ class CalculateMax extends React.Component {
     let top = this.calculateInitialTopSet(parseInt(this.state.benchMax));
     let backOff = this.calculateBackOff(top);
 
-    this.setState({
-      benchTopSetWeight: top,
-      benchBackOffSetWeight: backOff,
-      showBench: true,
-      benchMax: "",
-    });
+    if (this.state.squatMax === "" || isNaN(this.state.squatMax)) {
+      this.setState({ showBenchErrorMessage: true });
+    } else {
+      this.setState({
+        benchTopSetWeight: top,
+        benchBackOffSetWeight: backOff,
+        showBench: true,
+        benchMax: "",
+      });
+    }
   };
 
   /**
@@ -78,12 +117,16 @@ class CalculateMax extends React.Component {
     let top = this.calculateInitialTopSet(parseInt(this.state.deadMax));
     let backOff = this.calculateBackOff(top);
 
-    this.setState({
-      deadTopSetWeight: top,
-      deadBackOffSetWeight: backOff,
-      showDead: true,
-      deadMax: "",
-    });
+    if (this.state.squatMax === "" || isNaN(this.state.squatMax)) {
+      this.setState({ showDeadErrorMessage: true });
+    } else {
+      this.setState({
+        deadTopSetWeight: top,
+        deadBackOffSetWeight: backOff,
+        showDead: true,
+        deadMax: "",
+      });
+    }
   };
 
   render() {
@@ -111,6 +154,7 @@ class CalculateMax extends React.Component {
                 </div>
               </div>
             )}
+            {this.state.showSquatErrorMessage && <div>{this.invalidBox()}</div>}
             <button
               type="submit"
               className="fluid ui primary button"
@@ -142,6 +186,7 @@ class CalculateMax extends React.Component {
                 </div>
               </div>
             )}
+            {this.state.showBenchErrorMessage && <div>{this.invalidBox()}</div>}
             <button
               type="submit"
               className="fluid ui primary button"
@@ -173,6 +218,7 @@ class CalculateMax extends React.Component {
                 </div>
               </div>
             )}
+            {this.state.showDeadErrorMessage && <div>{this.invalidBox()}</div>}
             <button
               type="submit"
               className="fluid ui primary button"
