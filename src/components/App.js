@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import youtube from "../apis/youtube";
-import WorkoutGenerator from "./WorkoutGenerator";
+import WorkoutGen from "./WorkoutGen";
 import CalculateMax from "./CalculateMax";
 import Home from "./Home";
 import Route from "./Route";
@@ -9,23 +9,7 @@ import SearchBar from "./SearchBar";
 import VideoList from "./VideoList";
 import DailyIntake from "./DailyIntake";
 
-const dropdownOptions = [
-  {
-    workout: "Chest Powerlifter Style",
-    value: "Chest Workout - Powerlifting",
-  },
-  {
-    workout: "Back Powerlifter Style",
-    value: "Back Workout - Powerlifting",
-  },
-  {
-    workout: "Legs Powerlifter Style",
-    value: "Legs Workout - Powerlifting",
-  },
-];
-
 const App = () => {
-  const [selected, setSelected] = useState("");
   // keep track of the list of videos received from API request
   const [videos, setVideos] = useState([]);
 
@@ -54,12 +38,7 @@ const App = () => {
           <Route path="/workout">
             <CalculateMax />
 
-            <br />
-            <WorkoutGenerator
-              dropdownOptions={dropdownOptions}
-              selected={selected}
-              onSelectedChange={setSelected}
-            />
+            <WorkoutGen />
           </Route>
           <Route path="/searchExercise">
             {/* Adds room on left and right sides of search bar */}

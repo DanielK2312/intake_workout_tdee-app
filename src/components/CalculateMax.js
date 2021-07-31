@@ -33,6 +33,10 @@ class CalculateMax extends React.Component {
     }
   }
 
+  /**
+   *
+   * @returns red error box when invalid input is entered
+   */
   invalidBox = () => {
     return (
       <div className="ui negative message">
@@ -148,9 +152,9 @@ class CalculateMax extends React.Component {
                   onClick={() => this.setState({ showSquat: false })}
                 ></i>
                 <div className="header">
-                  Squat Set 1 Weight: {this.state.squatTopSetWeight}
+                  Squat Set 1 Weight: {this.state.squatTopSetWeight} lbs
                   <br />
-                  Squat Set 2 Weight: {this.state.squatBackOffSetWeight}
+                  Squat Set 2 Weight: {this.state.squatBackOffSetWeight} lbs
                 </div>
               </div>
             )}
@@ -180,9 +184,9 @@ class CalculateMax extends React.Component {
                   onClick={() => this.setState({ showBench: false })}
                 ></i>
                 <div className="header">
-                  Squat Set 1 Weight: {this.state.benchTopSetWeight}
+                  Squat Set 1 Weight: {this.state.benchTopSetWeight} lbs
                   <br />
-                  Squat Set 2 Weight: {this.state.benchBackOffSetWeight}
+                  Squat Set 2 Weight: {this.state.benchBackOffSetWeight} lbs
                 </div>
               </div>
             )}
@@ -212,9 +216,9 @@ class CalculateMax extends React.Component {
                   onClick={() => this.setState({ showDead: false })}
                 ></i>
                 <div className="header">
-                  Squat Set 1 Weight: {this.state.deadTopSetWeight}
+                  Squat Set 1 Weight: {this.state.deadTopSetWeight} lbs
                   <br />
-                  Squat Set 2 Weight: {this.state.deadBackOffSetWeight}
+                  Squat Set 2 Weight: {this.state.deadBackOffSetWeight} lbs
                 </div>
               </div>
             )}
