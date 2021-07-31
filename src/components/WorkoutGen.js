@@ -9,7 +9,7 @@ const WorkoutGen = () => {
   return (
     <div className="ui container" style={{ marginTop: "10px" }}>
       <hr />
-      <label>Select a workout to Generate</label>
+      <h4 className="ui dividing header">Select a Workout to Generate</h4>
       <Dropdown
         placeholder="Select a Workout"
         fluid

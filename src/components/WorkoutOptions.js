@@ -5,18 +5,18 @@ export const WorkoutOptions = [
     value: "Push Powerlifter Style",
   },
   {
-    key: "Pull",
-    text: "Pull",
-    value: "Pull",
+    key: "Pull Powerlifter Style",
+    text: "Pull Powerlifter Style",
+    value: "Pull Powerlifter Style",
   },
   {
-    key: "Quads",
-    text: "Quads",
-    value: "Quads",
+    key: "Quads Powerlifter Style",
+    text: "Quads Powerlifter Style",
+    value: "Quads Powerlifter Style",
   },
   {
-    key: "Hamstrings",
-    text: "Hamstrings",
-    value: "Hamstrings",
+    key: "Hamstrings Powerlifter Style",
+    text: "Hamstrings Powerlifter Style",
+    value: "Hamstrings Powerlifter Style",
   },
 ];
