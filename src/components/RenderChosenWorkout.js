@@ -24,3 +24,5 @@ const RenderChosenWorkout = ({ chosenWorkout }) => {
 };
 
 export default RenderChosenWorkout;
+
+//check
